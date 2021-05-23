@@ -7,16 +7,41 @@ collaboratively reach their goals. This challenge can be dissected
 into multiple sub-challenges, which include consensus and
 synchronization among the agents \cite{dorri2018multi}. Reaching a
 consensus among the agents is crucial for obtaining outputs from a
-model which take into consideration the state of all of its agents,
+model which takes into consideration the state of all of its agents,
 while a synchronization mechanism allows heterogeneous agents to take
 action when it is appropriate. The method proposed in this paper
-addresses both consensus and synchronization when fuzzy systems are
-used as the rule systems for the agents. We successfully used an
-initial prototype of this method in \cite{hernandez2021using}, where
-agents in a multi-agent system use intuitionistic fuzzy systems to
+addresses both challenges of consensus and synchronization in
+cooperative fuzzy agent-based models. We successfully used an initial
+prototype of this method in \cite{hernandez2021using}, where agents in
+a multi-agent system use Mamdani intuitionistic fuzzy systems to
 represent knowledge generated from Forex market datasets. The agents
 fuzzy systems were used as part of what we called ``specialization
 functions'', which served the multi-agent system as a synchronization
 system. This paper presents an improved version of that method, which
 has been extended to also function as a consensus mechanism.
 
+In our method, agents are designed to have their rules represented as
+fuzzy systems. The grades of membership calculated for the antecedents
+of these fuzzy systems are used to determine a score for the agent's
+competence in its current environment. %Continue
+
+We highlight the main contributions of this work as follows:
+\begin{itemize}
+  \item First, agents in the agent-based models can use fuzzy systems
+as both their rules and as a coordination control system, specifically
+for consensus and synchronization.
+%% Add rest.
+\end{itemize}
+
+%% Update for this paper. Rephrase.
+The reader will find an in-depth explanation of our method in Section
+\ref{section:proposed-method}, and explanations for the concepts
+required to understand the method can be found in Section
+\ref{section:preliminaries}. In order to evaluate the perforance of
+our method, experiments were performed and are described in Section
+\ref{section:experiments}. The results of the experiments are
+presented in Section \ref{section:results}, and a discussion of these
+results can be found in Section \ref{section:conclusion}. Finally,
+Section \ref{section:future-work} discusses some directions that our
+presented method can take in the future to better demonstrate its
+capabilities.
