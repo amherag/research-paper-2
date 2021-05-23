@@ -23,7 +23,20 @@ has been extended to also function as a consensus mechanism.
 In our method, agents are designed to have their rules represented as
 fuzzy systems. The grades of membership calculated for the antecedents
 of these fuzzy systems are used to determine a score for the agent's
-competence in its current environment. %Continue
+competence in its current environment. For this statement to make
+sense, the cores ($\mu (x) = 1$) of the membership functions must
+represent ideal values for the agent's inputs. As a consequence of
+this design, agents can be selected among an agent pool according to
+their level of competence, regardless of the agents' heterogeneity.
+
+Agent models can achieve synchronization using our method by selecting
+the most competent agent or agents to perform a task at a given
+moment. A restriction that must take place is that the agent models
+must be cooperative, i.e. every agent in the model must have the same
+goal. On the other hand, consensus is achieved by taking a subset ($A
+\subseteq B$) of those agents with the highest scores or level of
+competence, and apply an aggregation function on their outputs,
+e.g. calculating the mean of their outputs.
 
 We highlight the main contributions of this work as follows:
 \begin{itemize}
@@ -34,14 +47,9 @@ for consensus and synchronization.
 \end{itemize}
 
 %% Update for this paper. Rephrase.
-The reader will find an in-depth explanation of our method in Section
-\ref{section:proposed-method}, and explanations for the concepts
-required to understand the method can be found in Section
-\ref{section:preliminaries}. In order to evaluate the perforance of
-our method, experiments were performed and are described in Section
-\ref{section:experiments}. The results of the experiments are
-presented in Section \ref{section:results}, and a discussion of these
-results can be found in Section \ref{section:conclusion}. Finally,
-Section \ref{section:future-work} discusses some directions that our
-presented method can take in the future to better demonstrate its
-capabilities.
+We start this paper discussing the state of the art regarding
+coordination mechanisms for multi-agent systems and agent-based models
+in \ref{section:state-of-the-art}. A detailed explanation of our
+method is found in Section \ref{section:proposed-method}, and
+explanations for the concepts required to understand the method can be
+found in Section \ref{section:preliminaries}.
