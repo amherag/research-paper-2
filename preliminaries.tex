@@ -1,2 +1,75 @@
 \section{Preliminaries}
 \label{section:preliminaries}
+
+\subsection{Fuzzy Systems}
+\label{subsection:fuzzy-systems}
+
+In traditional logic one can generate logical inferences, such as
+\textit{if it's raining, then there are clouds in the sky}. In a
+similar fashion, we can use fuzzy sets to represent the antecedents
+and consequents in a logical inference process
+\cite{kruse1994foundations}. For example, one can extend the previous
+example to: \textit{if it's raining a lot, then there are many clouds
+in the sky}.
+
+There is a number of ways in which one can construct a fuzzy inference
+system, where one or more inputs or antecedents can be used to
+generate one or more outputs or consequents. Arguably, the two most
+popular types of fuzzy inference systems are the ones proposed by
+Mamdani and Assilian~\cite{Mamdani1975}, and Takagi and
+Sugeno~\cite{Takagi1985}. These systems use a series of fuzzy sets to
+represent the relationship between an input and its grade of
+membership to a set. These sets usually represent adjectives that
+describe the inputs, and are also considered to be the antecedents in
+the fuzzy inference system. For example, an input of 0.8 can represent
+a ``very high'' value. After obtaining these grades of membership, one
+can use these values to ``fire'' or ``activate'' the consequents. In
+the case of a Mamdani system, the consequents are represented as fuzzy
+sets, just like the antecedents. In contrast, in a Sugeno system,
+consequents are represented by mathematical functions. A set of rules
+is used to determine the relationship between the antecedents and the
+consequents, for example: \textit{if food quality is high then tip is
+high}. The aforementioned rule is creating a relationship between the
+fuzzy set that represents ``high food quality'' in the antecedents,
+and the fuzzy set that represents ``high tip'' in the
+consequents. Further continuing with the example, if ``food quality''
+is represented by a value of 0.8, the rule that creates the
+relationship between ``food quality'' and ``tip'' could determine a
+``tip'' of 0.8 too, depending on what membership function and what
+parameters are decided to be used to represent each.
+
+We have explained how a relationship between antecedents and
+consequents can be constructed in a fuzzy inference
+system. Nevertheless, the most interesting problem arises when a
+problem involves several fuzzy sets to represent different adjectives
+for single antecedents or consequents. In these cases, depending on
+the fuzzy rules, a number of consequents can be fired according to the
+inputs to the system. As seen in Figure \ref{figure:antecedents}, the
+input---represented by the dotted vertical black line---is associated
+with three fuzzy triangular sets or antecedents, where it
+``activates'' two of them. According to a set of fuzzy rules, the
+inputs then fire a set of triangular fuzzy sets that represent the
+consequents, as seen in Figure \ref{figure:consequents}.
+
+The fuzzy sets that represent the consequents are cut, and new shapes
+are obtained using those cuts, as represented by the green shapes in
+Figure \ref{figure:consequents}. These shapes are aggregated and
+result in the output of the fuzzy inference system, and this result
+can then be defuzzified using different methods, such as obtaining the
+centroid of the shape. In this example, a Mamdani fuzzy inference
+system is considered; in the case of a Sugeno system, for example, the
+antecedents would be represented by arbitrary mathematical functions,
+instead of membership functions representing shapes such as the
+triangles in the example presented above.
+
+\Figure[](topskip=0pt, botskip=0pt, midskip=0pt)
+[width=0.6\linewidth]
+{img/antecedents.png}
+{Example of antecedents in a Mamdani fuzzy system.
+  \label{figure:antecedents}}
+
+\Figure[](topskip=0pt, botskip=0pt, midskip=0pt)
+[width=0.6\linewidth]
+{img/consequents.png}
+{Example of consequents in a Mamdani fuzzy system.
+  \label{figure:consequents}}
