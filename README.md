@@ -14,7 +14,8 @@ the multiagent system. Inputs to an agents' fuzzy system are used as
   consensus and synchronization) and for the agents' rules.
 - The method can work in multiple agent organization approaches (flat,
   hierarchical, holonic, coalition, team, matrix, congregation).
-- The method can be implemented
+- The method can be implemented heterogeneous$$$$$
+- The method distributed$$$$$
 - There is agent communication using a blackboard approach during
   consensus. The agents communicate the size and direction of the
   trade position that the would create.
